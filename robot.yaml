@@ -1,0 +1,11 @@
+tasks:
+  Test RDP:
+    robotTaskName: RDP Test
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+ignoreFiles:
+  - .gitignore
