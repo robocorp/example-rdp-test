@@ -1,4 +1,4 @@
-# example-rdp-test
+# Simple robot to test Windows Desktop setups
 
 Contains Robocorp Robot which only tests the Windows RDP connection functionality.
 
