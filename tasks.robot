@@ -12,4 +12,5 @@ RDP Test
     Open Executable    calc.exe    Calculator
     Send Keys    123
     Screenshot  output/success.png  desktop=True
+    Muutos
     [Teardown]   Run Teardown
