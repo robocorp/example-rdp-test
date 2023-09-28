@@ -1,15 +1,17 @@
 *** Settings ***
 Documentation     Open Calculator app, send some keys and take a screenshot
-Library           RPA.Desktop.Windows
+Library           RPA.Windows
 
-*** Keywords ***
-Run Teardown
-    Run Keyword If Test Failed    Screenshot  output/fail.png  desktop=True
-    Close All Applications
 
 *** Tasks ***
 RDP Test
-    Open Executable    calc.exe    Calculator
-    Send Keys    123
-    Screenshot  output/success.png  desktop=True
-    [Teardown]   Run Teardown
+    [Setup]  Windows Run   calc.exe
+
+    Control Window    name:Calculator
+    Click    id:clearButton
+    Send Keys   keys=96+4=
+    Screenshot    subname:Calculator    ${OUTPUT_DIR}${/}success.png 
+    ${result} =    Get Attribute    id:CalculatorResults    Name
+    Log To Console    ${result}
+
+    [Teardown]   Close Current Window
