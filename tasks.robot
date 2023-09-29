@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Open Calculator app, send some keys and take a screenshot
+Documentation     Take a screenshot of the desktop
 Library           RPA.Windows
 
 *** Tasks ***
