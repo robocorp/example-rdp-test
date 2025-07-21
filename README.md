@@ -7,12 +7,10 @@ Setup this robot to run scheduled, with low priority and email or Slack notifica
 In cases where you do not have direct link to the IT (which we always recommend) this is a simple way to stay up-to-date. 
 
 ## Robot steps
-  
-  1. Open Windows calculator
-  2. Input number `123`
-  3. Take Screenshot
-  4. Teardown
-  5. Screenshot either `success.png` or `failure.png`
+
+The robot simply  and crops a 800x600 part of it   
+  1. Takes a screenshot from the windows desktop
+  2. Crop the screenshot to `success.png`
  
 ## Links
 
